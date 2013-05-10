@@ -22,7 +22,6 @@ namespace :base do
   desc "Make sure manifest.yml file is present"
   task :setup do
     run "mkdir -p #{shared_path}/assets"
-    run "touch #{shared_path}/assets/manifest.yml"
   end
   after "deploy:setup", "base:setup"
 end
